@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official Portal of the Drug Enforcement Commission (DEC) - Combating drug trafficking and money laundering.">
+    <title>Drug Enforcement Commission (DEC) | Official Portal</title>
+    <style>
+        :root {
+            --primary: #003366;
+            --secondary: #c5a059;
+            --accent: #2c5e2e;
+            --text: #333;
+            --light: #f4f7f6;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text);
+            line-height: 1.6;
+            background-color: var(--light);
+        }
+
+        header {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid var(--secondary);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        header img {
+            height: 60px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary);
+        }
+
+        .hero {
+            position: relative;
+            background-image: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url('hero.png');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--white);
+            text-align: center;
+            padding: 0 10%;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 3rem 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        h2 {
+            color: var(--primary);
+            border-left: 5px solid var(--secondary);
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        article {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        blockquote {
+            font-style: italic;
+            border-left: 4px solid #ccc;
+            margin: 1.5rem 0;
+            padding-left: 1rem;
+            color: #555;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: white;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        details {
+            background: white;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+            color: var(--primary);
+        }
+
+        form {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        fieldset {
+            border: 1px solid var(--primary);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+        }
+
+        legend {
+            font-weight: bold;
+            color: var(--primary);
+            padding: 0 0.5rem;
+        }
+
+        label {
+            display: block;
+            margin-top: 1rem;
+            font-weight: 600;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-top: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: var(--accent);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            margin-top: 2rem;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #1a3a1b;
+        }
+
+        footer {
+            background-color: #111;
+            color: #ccc;
+            padding: 3rem 5%;
+            text-align: center;
+        }
+
+        address {
+            font-style: normal;
+            margin: 1rem 0;
+        }
+
+        .social-aside {
+            background: #eee;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-top: 2rem;
+        }
+
+        .highlight {
+            background-color: #fff3cd;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+        }
+
+        kbd {
+            background: #f1f1f1;
+            padding: 2px 4px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <header id="site-header">
+        <div class="logo-container">
+            <img src="logo.png" alt="DEC Official Seal" title="Drug Enforcement Commission Logo">
+            <div id="brand-name">
+                <span style="font-size: 1.5rem; font-weight: bold;">DEC</span><br>
+                <small>Drug Enforcement Commission</small>
+            </div>
+        </div>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="#home" title="Go to home">Home</a></li>
+                <li><a href="#about" title="About the Commission">About</a></li>
+                <li><a href="#stats" title="Seizure Statistics">Statistics</a></li>
+                <li><a href="#report" title="Anonymous Tip Form">Report a Crime</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="home">
+        <div class="hero">
+            <h1>Integrity, Courage, Service</h1>
+            <p>Committed to a drug-free and financial crime-free society.</p>
+        </div>
+
+        <div class="container">
+            <!-- About Section -->
+            <section id="about">
+                <h2>Message from the Commissioner</h2>
+                <div class="grid-2">
+                    <article>
+                        <h3>The Battle Against Narcotic Drugs</h3>
+                        <p>The Drug Enforcement Commission remains <strong>vigilant</strong> in its mandate to curb drug trafficking. We believe in <em>education</em> and <em>enforcement</em> as the twin pillars of our strategy.</p>
+                        <blockquote>
+                            "Our mission is to safeguard our youth and economy from the destructive effects of illegal substances."
+                            <cite>&mdash; Commissioner's Annual Address</cite>
+                        </blockquote>
+                        <p>If you need immediate assistance, please press <kbd>Ctrl</kbd> + <kbd>F</kbd> to search our resources.</p>
+                    </article>
+                    <aside class="social-aside">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#" target="_blank" rel="noopener">Anti-Money Laundering Unit</a></li>
+                            <li><a href="#" target="_blank" rel="noopener">Education & Counseling</a></li>
+                            <li><a href="#" target="_blank" rel="noopener">Legal Frameworks</a></li>
+                        </ul>
+                        <p><mark class="highlight">Update:</mark> The <abbr title="Drug Enforcement Commission">DEC</abbr> has launched a new mobile office fleet.</p>
+                    </aside>
+                </div>
+            </section>
+
+            <!-- Statistics Section -->
+            <section id="stats">
+                <h2>Seizure Statistics (2025)</h2>
+                <div style="overflow-x: auto;">
+                    <table id="seizure-table">
+                        <caption>Monthly Summary of Narcotic Seizures</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Month</th>
+                                <th scope="col">Cannabis (kg)</th>
+                                <th scope="col">Cocaine (kg)</th>
+                                <th scope="col">Arrests</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>January</td>
+                                <td>450.5</td>
+                                <td>1.2</td>
+                                <td>85</td>
+                            </tr>
+                            <tr>
+                                <td>February</td>
+                                <td>380.2</td>
+                                <td>0.5</td>
+                                <td>72</td>
+                            </tr>
+                            <tr>
+                                <td>March</td>
+                                <td>512.9</td>
+                                <td>2.1</td>
+                                <td>110</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p><small>* Data verified by the National Intelligence Bureau.</small></p>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education">
+                <h2>Substance Classifications</h2>
+                <details>
+                    <summary>Class A Substances</summary>
+                    <p>Highly addictive controlled drugs including Heroin, Cocaine, and LSD. Possession leads to maximum penalties under the <del>1993</del> <ins>2021</ins> Narcotics Act.</p>
+                </details>
+                <details>
+                    <summary>Class B Substances</summary>
+                    <p>Controlled medicinal drugs like Morphine and Pethidine, subject to strict prescription monitoring.</p>
+                </details>
+                <figure>
+                    <img src="logo.png" alt="Educational Graphic" width="100" height="100">
+                    <figcaption>Fig 1. Official classification insignia.</figcaption>
+                </figure>
+            </section>
+
+            <!-- Reporting Section -->
+            <section id="report">
+                <h2>Anonymous Tip Portal</h2>
+                <form action="#" method="POST" id="tip-form">
+                    <fieldset>
+                        <legend>Incident Details</legend>
+                        <label for="location">Location of Incident:</label>
+                        <input type="text" id="location" name="location" placeholder="Suburbs, City, or Province" required>
+
+                        <label for="incident-date">Date Observed:</label>
+                        <input type="date" id="incident-date" name="incident-date" required>
+
+                        <label for="drug-type">Suspected Substance Type:</label>
+                        <select id="drug-type" name="drug-type">
+                            <option value="cannabis">Cannabis</option>
+                            <option value="cocaine">Cocaine</option>
+                            <option value="money-laundering">Money Laundering</option>
+                            <option value="other">Other / Unknown</option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Description</legend>
+                        <label for="description">Provide a detailed description (max 500 characters):</label>
+                        <textarea id="description" name="description" rows="5" cols="50" maxlength="500" placeholder="Describe what you saw..."></textarea>
+                    </fieldset>
+
+                    <button type="submit" id="submit-tip">Submit Anonymous Tip</button>
+                    <input type="hidden" name="form_id" value="anon_778">
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer id="main-footer">
+        <hr>
+        <div class="footer-content">
+            <h3>Drug Enforcement Commission HQ</h3>
+            <address>
+                Government Road, P.O. Box 38636<br>
+                Lusaka, Zambia
+            </address>
+            <p>Contact Us: <a href="tel:+260211123456" style="color:var(--secondary)">+260 211 123 456</a></p>
+            <p>Last Web Update: <time datetime="2026-04-10">April 10, 2026</time></p>
+            <p>&copy; 2026 Drug Enforcement Commission. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
