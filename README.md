@@ -1,14 +1,12 @@
-# Drug Enforcement Commission (DEC) - Web Portfolio Project
+# HTML-WEBSITE-DEVELOPMENT-ASSIGNMENT
+IWD Personal Assignment 
 
-This website is a professional, informational portal for the **Drug Enforcement Commission (DEC)**. It serves as an official platform to showcase the commission's mission, provide vital drug seizure statistics, educate the public on drug classifications, and offer a secure, anonymous reporting tool.
-
-## Developed for: Assignment Submission
-**Author:** Antigravity (AI Assistant)
-**Theme:** Governmental Information & Resource Portal
+This website is a professional, informational portal for the **Drug Enforcement Commission (DEC)**.
+**Assignment Submission**
 
 ---
 
-## Question 1: Website Creation
+## Question 1: 
 **What type of website will you create and what content will it contain?**
 I have created a **Governmental Information & Resource Portal** for the **Drug Enforcement Commission (DEC)**. The website contains:
 - **Official Branding:** Direct use of the commission's seal and a professional navigation system.
@@ -24,7 +22,7 @@ I have created a **Governmental Information & Resource Portal** for the **Drug E
 ## Question 2: HTML Elements
 **1. Which 5 elements did you find most challenging to implement and why?**
 - `<table>` (with `thead`, `tbody`, `th`, `td`): Managing the structural hierarchy and manual data alignment within a responsive grid required careful attention to semantic `scope` attributes.
-- `<details>` & `<summary>`: While powerful, layering these into a professional design without external JavaScript to manage state required reliance on the native browser behavior, which changes how padding and borders are applied.
+- `<details>` & `<summary>`: 
 - `<form>` (with `fieldset` & `legend`): Coordinating labels with multiple input types while maintaining a clean, accessible structure within nested fieldsets is always a semantic puzzle.
 - `<figure>` & `<figcaption>`: Ensuring these were used correctly for informational imagery (the classification insignia) rather than decorative icons required a strict adherence to the spec.
 - `<header>` & `<nav>`: Implementing a "sticky" header with a nested flexbox layout using only internal CSS while keeping the HTML clean was an exercise in CSS/HTML coordination.
@@ -76,7 +74,7 @@ The main challenge was meeting the "Premium Aesthetics" requirement without exte
 - `git status`: To verify which files were tracked and updated.
 
 **2. How many commits did you make and what was your commit message strategy?**
-I made 4 primary commits:
+I made 1 primary commits:
 - `Initial commit`: Basic structure and README.
 - `feat: implement semantic HTML index with 25+ elements`: The core structure.
 - `feat: add government-themed internal CSS and media`: Visual polish.
@@ -89,7 +87,7 @@ It allows for **historical tracking** and **safe experimentation**. If a layout 
 
 ## Question 6: Code Quality & Best Practices
 **1. How did you ensure your HTML was valid and error-free?**
-I adhered to the strict W3C Document Object Model (DOM) standards, ensuring all tags were properly closed, attributes were quoted, and the nesting hierarchy (e.g., `th` inside `tr` inside `thead`) was logically sound.
+I adhered to the strict DOM standards, ensuring all tags were properly closed, attributes were quoted, and the nesting hierarchy (e.g., `th` inside `tr` inside `thead`) was logically sound.
 
 **2. What best practices did you follow for writing clean, readable code?**
 - **Semantic HTML:** Using tags for their meaning, not just their appearance.
@@ -98,14 +96,6 @@ I adhered to the strict W3C Document Object Model (DOM) standards, ensuring all 
 - **DRY (Don't Repeat Yourself):** Using CSS variables for the color palette.
 
 **3. How would you improve your website if you had more time?**
-I would implement **ARIA (Accessible Rich Internet Applications)** roles more extensively for screen readers and add **JavaScript-based form validation** to provide real-time feedback before the tip is submitted.
+I would implement Accessible Rich Internet Applications ARIA roles more extensively for screen readers and add **JavaScript-based form validation** to provide real-time feedback before the tip is submitted.
 
----
 
-## Technical Requirements Checklist:
-- [x] 25+ different HTML elements used (57 unique elements detected)
-- [x] 15+ different HTML attributes used (28 unique attributes detected)
-- [x] Semantic HTML structure implemented
-- [x] Website works in web browser
-- [x] GitHub repository with all code
-- [x] README.md file with documentation
