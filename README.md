@@ -74,7 +74,7 @@ The main challenge was meeting the "Premium Aesthetics" requirement without exte
 - `git status`: To verify which files were tracked and updated.
 
 **2. How many commits did you make and what was your commit message strategy?**
-I made 1 primary commits:
+I made 5 primary commits:
 - `Initial commit`: Basic structure and README.
 - `feat: implement semantic HTML index with 25+ elements`: The core structure.
 - `feat: add government-themed internal CSS and media`: Visual polish.
